@@ -69,3 +69,41 @@ import './index.css';
 //   <p title="liyang">Hello world</p>,
 //   document.getElementById('root')
 // )
+
+// 每一秒重新渲染一次
+
+// const demo = () => {
+//   const ele = (
+//     <div>
+//       <p>{new Date().toLocaleTimeString()}</p>
+//       <p>{new Date().toString()}</p>
+//     </div>
+//   )
+//   ReactDOM.render(
+//     ele,
+//     document.getElementById('root')
+//   )
+// }
+// setInterval(demo, 1000)
+
+// 定义一个基础组件
+
+// const demo = (props) => <h1>Hello, {props.name}</h1>
+// ReactDOM.render(
+//   demo({
+//     name: 'liyang'
+//   }),
+//   document.getElementById('root')
+// )
+
+// 使用class
+
+// class Demo extends React.Component {
+//   render () {
+//     return <h1>Hello, {this.props.name}</h1>
+//   }
+// }
+// ReactDOM.render(
+//   <Demo name="liyang" />,
+//   document.getElementById('root')
+// )
