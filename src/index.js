@@ -119,14 +119,54 @@ import './index.css';
 
 // 组合组件
 
-class Hello extends React.Component {
-  render () {
-    return <h1>Hello, my name is {this.props.name}</h1>
-  }
-}
-// use: <Hello></Hello>
+// class Hello extends React.Component {
+//   render () {
+//     return <h1>Hello, my name is {this.props.name}</h1>
+//   }
+// }
+// const ele = (
+//   <div>
+//     <Hello name="liyang"></Hello>
+//     <Hello name="xiaoMing"></Hello>
+//     <Hello name="xiaoHong"></Hello>
+//     <Hello name="your father"></Hello>
+//   </div>
+// )
+// ReactDOM.render(
+//   ele,
+//   document.getElementById('root')
+// )
 
-ReactDOM.render(
-  <Hello name="liyang"></Hello>,
-  document.getElementById('root')
-)
+// 改写时钟的例子
+
+// class Clock extends React.Component {
+//   constructor (props) {
+//     super(props);
+//     this.state = {
+//       date: new Date()
+//     };
+//   }
+//   componentDidMount() {
+//     this.timerID = setInterval(
+//       () => this.tick(),
+//       1000
+//     );
+//   }
+//   componentWillUnmount() {
+//     clearInterval(this.timerID);
+//   }
+//   tick() {
+//     this.setState({
+//       date: new Date()
+//     });
+//   }
+//   render () {
+//     return <h1>{this.state.date.toLocaleTimeString()}</h1>
+//   }
+// }
+// ReactDOM.render(
+//   <Clock></Clock>,
+//   document.getElementById('root')
+// )
+
+// 一个组件自身更新的例子
