@@ -96,6 +96,15 @@ import './index.css';
 //   document.getElementById('root')
 // )
 
+// 另一种调用方式
+
+// const Demo = (props) => <h1>Hello, {props.name}</h1>
+// const ele = <Demo name="liyang"/>
+// ReactDOM.render(
+//   ele,
+//   document.getElementById('root')
+// )
+
 // 使用class
 
 // class Demo extends React.Component {
@@ -107,3 +116,17 @@ import './index.css';
 //   <Demo name="liyang" />,
 //   document.getElementById('root')
 // )
+
+// 组合组件
+
+class Hello extends React.Component {
+  render () {
+    return <h1>Hello, my name is {this.props.name}</h1>
+  }
+}
+// use: <Hello></Hello>
+
+ReactDOM.render(
+  <Hello name="liyang"></Hello>,
+  document.getElementById('root')
+)
