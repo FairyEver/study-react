@@ -17,19 +17,16 @@ class FirstComponent extends React.Component {
                 }
             ]
         };
-        setTimeout(() => {
-            this.refreshData()
-        }, 3000);
     }
-    refreshData () {
+    handleSubmit (user, say) {
+        let comments = this.state.list
+        comments.push({
+            title: user,
+            text: say
+        })
         this.setState({
-            list: [
-                {
-                    title: 'very good 3',
-                    text: 'this is a very good component 3'
-                }
-            ]
-        });
+            list: comments
+        })
     }
     render () {
         return (
@@ -41,7 +38,7 @@ class FirstComponent extends React.Component {
                         </ListItem>
                     )
                 })}
-                <FormComponent></FormComponent>
+                <FormComponent onCommentSubmit={this.handleSubmit.bind(this)}></FormComponent>
             </div>
         )
     }
